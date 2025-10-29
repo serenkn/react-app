@@ -5,14 +5,14 @@ function Detail({ cornerType, size: {w,h,d}}) {
     return (
         <>
             {cornerType === "sharp" ? (
-                <mash>
-                    <boxGeomettry args={[w,h,d]} />
-                    <meshStanderardMaterial
+                <mesh>
+                    <boxGeometry args={[w,h,d]} />
+                    <meshStandardMaterial
                         color={0x88ccff}
                         transparent
                         opacity={0.6}
                         side={THREE.DoubleSide} />
-                </mash>
+                </mesh>
             ) : (
                 <RoundedBox args={[w,h,d]} radius={0.3} smothness={6}>
                     <meshToonMaterial
@@ -21,10 +21,10 @@ function Detail({ cornerType, size: {w,h,d}}) {
                 </RoundedBox>
             )}
 
-            <mash rotation={[-Math.PI / 2,0,0]} position={[0, -h / 2 - 0.001, 0 ]}>
-                <planeGeometory args={[20, 20]} />
-                <meshStanderardMaterial color={0xffffff} />
-            </mash>
+            <mesh rotation={[-Math.PI / 2,0,0]} position={[0, -h / 2 - 0.001, 0 ]}>
+                <planeGeometry args={[20, 20]} />
+                <meshStandardMaterial  color={0xffffff} />
+            </mesh>
             <axesHelper args={[5]} />
         </>
     );

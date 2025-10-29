@@ -27,19 +27,19 @@ function Form ({ cornerType, onCornerChange, size, onSizeChange }) {
                 <input
                 type="number"
                 step="0.1"
-                value={"size.w"}
+                value={size.w}
                 onChange={e => onSizeChange({...size, w: +e.target.value })} />
 
                 <input
                 type="number"
                 step="0.1"
-                value={"size.h"}
+                value={size.h}
                 onChange={e => onSizeChange({...size, h: +e.target.value })} />
 
                 <input
                 type="number"
                 step="0.1"
-                value={"size.d"}
+                value={size.d}
                 onChange={e => onSizeChange({...size, d: +e.target.value })} />
             </div>
         </div>
