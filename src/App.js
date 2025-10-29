@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import Create from './pages/Create';
 
 function App() {
   return (
