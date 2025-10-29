@@ -9,13 +9,13 @@ function Create() {
     const [cornerType, setCornerType] = useState("sharp");
     const [size, setSize] = useState({ s: 4, h: 2, d: 3 });
 
-    const clamp = (val, min, max) => Mat.min(Math.max(val, min), max);
+    const clamp = (val, min, max) => Math.min(Math.max(val, min), max);
 
     const handleSizeChange = (next) => {
         const safe = {
             w: clamp(next.w || size.w, 0.1, 100),
-            w: clamp(next.h || size.h, 0.1, 100),
-            w: clamp(next.d || size.d, 0.1, 100),
+            h: clamp(next.h || size.h, 0.1, 100),
+            d: clamp(next.d || size.d, 0.1, 100),
         };
         setSize(safe);
     };
